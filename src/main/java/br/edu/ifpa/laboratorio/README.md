@@ -30,3 +30,17 @@ Banco de dados MySQL:
 
 ```sql
 CREATE DATABASE controle_laboratorio;
+
+## Diagramas UML
+
+### Diagrama de Classe
+
+![Diagrama de Classe](src/main/java/br/edu/ifpa/laboratorio/images/Diagrama de classe.png)
+
+### Diagrama de Sequência
+
+![Diagrama de Sequência](src/main/java/br/edu/ifpa/laboratorio/images/Diagrama de sequência.png)
+
+### Diagrama de Uso
+
+![Diagrama de Uso](src/main/java/br/edu/ifpa/laboratorio/images/diagramas de uso.png)
