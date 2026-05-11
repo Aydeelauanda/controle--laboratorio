@@ -1,6 +1,6 @@
 # Sistema de Controle de Empréstimo de Equipamentos
 
-## Integrantes
+## Integrante
 
 - Aydêe Lauanda Costa Barroso
 
@@ -8,10 +8,9 @@
 
 ## Descrição do problema
 
-O sistema foi desenvolvido para realizar o controle de empréstimos de equipamentos de um laboratório acadêmico.  
-O projeto permite cadastrar alunos, cadastrar equipamentos, realizar empréstimos, bloquear equipamentos indisponíveis e registrar devoluções.
+O sistema foi desenvolvido para realizar o controle de empréstimos de equipamentos de um laboratório acadêmico.
 
-O objetivo é facilitar o gerenciamento dos equipamentos e evitar conflitos durante os empréstimos.
+O projeto permite cadastrar alunos, cadastrar equipamentos, realizar empréstimos, bloquear equipamentos indisponíveis e registrar devoluções.
 
 ---
 
@@ -25,105 +24,46 @@ O objetivo é facilitar o gerenciamento dos equipamentos e evitar conflitos dura
 
 ---
 
-## Estrutura do projeto
-
-- `model` → classes do sistema
-- `dao` → acesso ao banco de dados
-- `database` → conexão com MySQL
-- `README.md` → documentação do projeto
-
----
-
 ## Requisitos implementados
 
 - Cadastro de alunos
 - Cadastro de equipamentos
-- Listagem de equipamentos disponíveis
 - Realização de empréstimos
-- Bloqueio de equipamentos indisponíveis
 - Registro de devolução
+- Controle de disponibilidade
 - Histórico de empréstimos
 
 ---
 
-## Modelo do banco de dados
+# Diagramas UML
 
-### Tabela aluno
+## Diagrama de Classe
 
-| Campo | Tipo |
-|---|---|
-| id | INT |
-| nome | VARCHAR |
-| matricula | VARCHAR |
-
-### Tabela equipamento
-
-| Campo | Tipo |
-|---|---|
-| id | INT |
-| nome | VARCHAR |
-| disponivel | BOOLEAN |
-
-### Tabela emprestimo
-
-| Campo | Tipo |
-|---|---|
-| id | INT |
-| aluno_id | INT |
-| equipamento_id | INT |
-| data_emprestimo | DATE |
-| data_devolucao | DATE |
-| status | VARCHAR |
+![Diagrama de Classe](src/main/java/br/edu/ifpa/laboratorio/images/diagrama-classe.png)
 
 ---
 
-## Diagramas UML
+## Diagrama de Sequência
 
-### Diagrama de Classe
-
-![Diagrama de Classe](src/main/java/br/edu/ifpa/laboratorio/images/Diagrama%20de%20classe.png)
+![Diagrama de Sequência](src/main/java/br/edu/ifpa/laboratorio/images/diagrama-sequencia.png)
 
 ---
 
-### Diagrama de Sequência
+## Diagrama de Uso
 
-![Diagrama de Sequência](src/main/java/br/edu/ifpa/laboratorio/images/Diagrama%20de%20sequência.png)
-
----
-
-### Diagrama de Uso
-
-![Diagrama de Uso](src/main/java/br/edu/ifpa/laboratorio/images/diagramas%20de%20uso.png)
+![Diagrama de Uso](src/main/java/br/edu/ifpa/laboratorio/images/diagrama-uso.png)
 
 ---
 
-## Como criar o banco MySQL
+## Como executar o projeto
+
+1. Criar o banco no MySQL
+2. Configurar usuário e senha no arquivo de conexão
+3. Executar a classe Main.java
+
+---
+
+## Banco de dados
 
 ```sql
 CREATE DATABASE laboratorio;
-
-USE laboratorio;
-
-CREATE TABLE aluno (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100),
-    matricula VARCHAR(20)
-);
-
-CREATE TABLE equipamento (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100),
-    disponivel BOOLEAN
-);
-
-CREATE TABLE emprestimo (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    aluno_id INT,
-    equipamento_id INT,
-    data_emprestimo DATE,
-    data_devolucao DATE,
-    status VARCHAR(30),
-
-    FOREIGN KEY (aluno_id) REFERENCES aluno(id),
-    FOREIGN KEY (equipamento_id) REFERENCES equipamento(id)
-);
