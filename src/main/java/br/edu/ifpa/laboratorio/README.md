@@ -39,21 +39,20 @@ O projeto permite cadastrar alunos, cadastrar equipamentos, realizar empréstimo
 
 ## Diagrama de Classe
 
-![diagrama-classe](src/main/java/br/edu/ifpa/laboratorio/images/diagrama-classe.png)
-
----
+<img width="851" height="599" alt="Diagrama de classe" src="https://github.com/user-attachments/assets/d7746907-4f24-40b6-905c-d271d3d57a97" />
 
 ## Diagrama de Sequência
 
-![Diagrama de Sequência](src/main/java/br/edu/ifpa/laboratorio/images)
+![Diagrama de Sequência]
 
----
+<img width="1401" height="583" alt="Diagrama de sequência" src="https://github.com/user-attachments/assets/646e83e3-240d-4a4b-85fe-326321e32599" />
+
 
 ## Diagrama de Uso
 
-![Diagrama de Uso](src/main/java/br/edu/ifpa/laboratorio/images)
+![Diagrama de Uso]
 
----
+<img width="514" height="408" alt="diagramas de uso" src="https://github.com/user-attachments/assets/88c2217a-fa2e-4e5a-ab0e-d09793c895da" />
 
 ## Como executar o projeto
 
