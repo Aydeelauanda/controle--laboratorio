@@ -39,7 +39,7 @@ O projeto permite cadastrar alunos, cadastrar equipamentos, realizar empréstimo
 
 ## Diagrama de Classe
 
-![Diagrama de Classe](src/main/java/br/edu/ifpa/laboratorio/images)
+![Diagrama de Classe](src/main/java/br/edu/ifpa/laboratorio/images/diagrama-classe.png)
 
 ---
 
